@@ -45,8 +45,6 @@ on fs
     # We need to make sure we are going to load the propper modules
     # otherwhise the Kernel will refuse to load them
     # wich will simply result in not working features
-    # Remount RW
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system remount rw
     mount tmpfs tmpfs /system/lib/modules
     symlink /lib/modules/dma_test.ko /system/lib/modules/dma_test.ko
     symlink /lib/modules/reset_modem.ko /system/lib/modules/reset_modem.ko
@@ -64,8 +62,6 @@ on fs
     symlink /lib/modules/dhd.ko /system/lib/modules/dhd.ko
     symlink /lib/modules/scsi_wait_scan.ko /system/lib/modules/scsi_wait_scan.ko
     symlink /lib/modules/spidev.ko /system/lib/modules/spidev.ko
-    # Remount RW
-    mount ext4 /dev/block/platform/msm_sdcc.1/by-name/system /system remount ro
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
