@@ -222,9 +222,9 @@ on post-fs
     mkdir /cache/lost+found 0770 root root
     restorecon /cache/lost+found
 
-    # ko files for exfat
-    insmod /system/lib/modules/exfat_core.ko
-    insmod /system/lib/modules/exfat_fs.ko
+    ## ko files for exfat, do we need them? not realy ...
+    # insmod /system/lib/modules/exfat_core.ko
+    # insmod /system/lib/modules/exfat_fs.ko
 
 on post-fs-data
     # We chown/chmod /data again so because mount is run as root + defaults
