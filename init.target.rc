@@ -153,9 +153,9 @@ on property:qcom.thermal=thermald
 on property:qcom.thermal=thermal-engine
     start thermal-engine
 
-service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
-   user root
-   disabled
+# service mpdecision /system/bin/mpdecision --no_sleep --avg_comp
+#    user root
+#    disabled
 
 service rf4ce /system/bin/rf4ce
    class main
