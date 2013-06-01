@@ -37,6 +37,15 @@ else
   echo "ExFat-Debug: SD-Card is type: ${SDTYPE}"
 fi
 
+## frandom kernel module
+if [ -f /system/lib/modules/frandom.ko ];
+then
+  echo "FRANDOM: found frandom Kernelmodule, loading..."
+  insmod /system/lib/modules/frandom.ko
+else
+  echo "FRANDOM: frandom Kernelmodule not found, skipping..."
+fi
+
 # Remount FileSys RO
 /sbin/busybox mount -t rootfs -o remount,ro rootfs
 
